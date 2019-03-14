@@ -36,13 +36,13 @@
 
         var score=0;
         var seconds=0;
-        var timer=window.setInterval(moveIt, 1000);
+        var timer=window.setInterval(moveIt, 750);
 
         function moveIt() {
             seconds++;
             document.getElementById("balloon").style.left=Math.random()*900 + "px";
             document.getElementById("balloon").style.top=Math.random()*500 + "px";
-            if(seconds>30) {
+            if(seconds>10) {
                 clearInterval(timer);
                 alert("You scored:" + score);
                 location.reload();
